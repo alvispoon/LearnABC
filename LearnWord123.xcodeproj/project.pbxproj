@@ -13,6 +13,22 @@
 		F06A7A27247D034300FFC07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A25247D034300FFC07E /* Main.storyboard */; };
 		F06A7A29247D034600FFC07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A28247D034600FFC07E /* Assets.xcassets */; };
 		F06A7A2C247D034600FFC07E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A2A247D034600FFC07E /* LaunchScreen.storyboard */; };
+		F06A7A35247D039D00FFC07E /* AtoZ.plist in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A34247D039D00FFC07E /* AtoZ.plist */; };
+		F06A7A38247D046800FFC07E /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A37247D046800FFC07E /* Level.swift */; };
+		F06A7A3B247D056100FFC07E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A3A247D056100FFC07E /* GameController.swift */; };
+		F06A7A3D247D064700FFC07E /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A3C247D064700FFC07E /* config.swift */; };
+		F06A7A41247D0A8700FFC07E /* Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A40247D0A8700FFC07E /* Tiles.swift */; };
+		F06A7A44247D110600FFC07E /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A43247D110600FFC07E /* ResultView.swift */; };
+		F06A7A46247F91A000FFC07E /* PopupLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A45247F91A000FFC07E /* PopupLevel.swift */; };
+		F06A7A482482A6BC00FFC07E /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A472482A6BC00FFC07E /* ActionButton.swift */; };
+		F06A7A4A2486525600FFC07E /* PopupVictory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A492486525600FFC07E /* PopupVictory.swift */; };
+		F06A7A4C2487843800FFC07E /* PopMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A4B2487843800FFC07E /* PopMode.swift */; };
+		F06A7A4E24879B0200FFC07E /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A4D24879B0200FFC07E /* HUDView.swift */; };
+		F09FF697248F8AD500E609FF /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FF696248F8AD500E609FF /* mainViewController.swift */; };
+		F09FF69C249CAB3700E609FF /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = F09FF699249CAB3700E609FF /* success.wav */; };
+		F09FF69D249CAB3700E609FF /* selected.wav in Resources */ = {isa = PBXBuildFile; fileRef = F09FF69A249CAB3700E609FF /* selected.wav */; };
+		F09FF69E249CAB3700E609FF /* fail1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F09FF69B249CAB3700E609FF /* fail1.wav */; };
+		F09FF6A0249CB0CC00E609FF /* levelup.wav in Resources */ = {isa = PBXBuildFile; fileRef = F09FF69F249CB0CC00E609FF /* levelup.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +40,22 @@
 		F06A7A28247D034600FFC07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F06A7A2B247D034600FFC07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F06A7A2D247D034600FFC07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F06A7A34247D039D00FFC07E /* AtoZ.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AtoZ.plist; sourceTree = "<group>"; };
+		F06A7A37247D046800FFC07E /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		F06A7A3A247D056100FFC07E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		F06A7A3C247D064700FFC07E /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		F06A7A40247D0A8700FFC07E /* Tiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiles.swift; sourceTree = "<group>"; };
+		F06A7A43247D110600FFC07E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		F06A7A45247F91A000FFC07E /* PopupLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupLevel.swift; sourceTree = "<group>"; };
+		F06A7A472482A6BC00FFC07E /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		F06A7A492486525600FFC07E /* PopupVictory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVictory.swift; sourceTree = "<group>"; };
+		F06A7A4B2487843800FFC07E /* PopMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMode.swift; sourceTree = "<group>"; };
+		F06A7A4D24879B0200FFC07E /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		F09FF696248F8AD500E609FF /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		F09FF699249CAB3700E609FF /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
+		F09FF69A249CAB3700E609FF /* selected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = selected.wav; sourceTree = "<group>"; };
+		F09FF69B249CAB3700E609FF /* fail1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail1.wav; sourceTree = "<group>"; };
+		F09FF69F249CB0CC00E609FF /* levelup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelup.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +88,71 @@
 		F06A7A1E247D034300FFC07E /* LearnWord123 */ = {
 			isa = PBXGroup;
 			children = (
+				F09FF69B249CAB3700E609FF /* fail1.wav */,
+				F09FF69A249CAB3700E609FF /* selected.wav */,
+				F09FF699249CAB3700E609FF /* success.wav */,
+				F09FF69F249CB0CC00E609FF /* levelup.wav */,
+				F09FF698249CAB2800E609FF /* Audio */,
+				F06A7A3F247D09E300FFC07E /* Views */,
+				F06A7A39247D053B00FFC07E /* Controller */,
+				F06A7A36247D044E00FFC07E /* Models */,
+				F06A7A33247D035B00FFC07E /* Levels */,
 				F06A7A1F247D034300FFC07E /* AppDelegate.swift */,
 				F06A7A21247D034300FFC07E /* SceneDelegate.swift */,
 				F06A7A23247D034300FFC07E /* ViewController.swift */,
 				F06A7A25247D034300FFC07E /* Main.storyboard */,
+				F09FF696248F8AD500E609FF /* mainViewController.swift */,
 				F06A7A28247D034600FFC07E /* Assets.xcassets */,
 				F06A7A2A247D034600FFC07E /* LaunchScreen.storyboard */,
 				F06A7A2D247D034600FFC07E /* Info.plist */,
+				F06A7A3C247D064700FFC07E /* config.swift */,
 			);
 			path = LearnWord123;
+			sourceTree = "<group>";
+		};
+		F06A7A33247D035B00FFC07E /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				F06A7A34247D039D00FFC07E /* AtoZ.plist */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		F06A7A36247D044E00FFC07E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F06A7A37247D046800FFC07E /* Level.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F06A7A39247D053B00FFC07E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F06A7A3A247D056100FFC07E /* GameController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F06A7A3F247D09E300FFC07E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F06A7A40247D0A8700FFC07E /* Tiles.swift */,
+				F06A7A472482A6BC00FFC07E /* ActionButton.swift */,
+				F06A7A43247D110600FFC07E /* ResultView.swift */,
+				F06A7A45247F91A000FFC07E /* PopupLevel.swift */,
+				F06A7A492486525600FFC07E /* PopupVictory.swift */,
+				F06A7A4B2487843800FFC07E /* PopMode.swift */,
+				F06A7A4D24879B0200FFC07E /* HUDView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F09FF698249CAB2800E609FF /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +213,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09FF69C249CAB3700E609FF /* success.wav in Resources */,
+				F09FF69D249CAB3700E609FF /* selected.wav in Resources */,
 				F06A7A2C247D034600FFC07E /* LaunchScreen.storyboard in Resources */,
 				F06A7A29247D034600FFC07E /* Assets.xcassets in Resources */,
+				F09FF6A0249CB0CC00E609FF /* levelup.wav in Resources */,
+				F06A7A35247D039D00FFC07E /* AtoZ.plist in Resources */,
+				F09FF69E249CAB3700E609FF /* fail1.wav in Resources */,
 				F06A7A27247D034300FFC07E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +231,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06A7A4A2486525600FFC07E /* PopupVictory.swift in Sources */,
+				F06A7A46247F91A000FFC07E /* PopupLevel.swift in Sources */,
+				F06A7A41247D0A8700FFC07E /* Tiles.swift in Sources */,
 				F06A7A24247D034300FFC07E /* ViewController.swift in Sources */,
+				F06A7A4C2487843800FFC07E /* PopMode.swift in Sources */,
+				F06A7A3B247D056100FFC07E /* GameController.swift in Sources */,
+				F06A7A4E24879B0200FFC07E /* HUDView.swift in Sources */,
 				F06A7A20247D034300FFC07E /* AppDelegate.swift in Sources */,
+				F06A7A3D247D064700FFC07E /* config.swift in Sources */,
+				F09FF697248F8AD500E609FF /* mainViewController.swift in Sources */,
+				F06A7A44247D110600FFC07E /* ResultView.swift in Sources */,
+				F06A7A38247D046800FFC07E /* Level.swift in Sources */,
 				F06A7A22247D034300FFC07E /* SceneDelegate.swift in Sources */,
+				F06A7A482482A6BC00FFC07E /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

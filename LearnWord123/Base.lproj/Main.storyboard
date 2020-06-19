@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7hT-dM-YLf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="chi-do-1AF">
+            <objects>
+                <viewController id="7hT-dM-YLf" customClass="mainViewController" customModule="LearnWord123" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Nv-CM-fat">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLarge" translatesAutoresizingMaskIntoConstraints="NO" id="f5S-es-6hR">
+                                <rect key="frame" x="41.5" y="94" width="331" height="358.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCI-dv-3uf">
+                                <rect key="frame" x="153" y="567" width="108" height="71.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gCI-dv-3uf" secondAttribute="height" multiplier="6:4" id="yVk-pW-Wb4"/>
+                                </constraints>
+                                <state key="normal" image="easy"/>
+                                <connections>
+                                    <action selector="clickEasyMode:" destination="7hT-dM-YLf" eventType="touchUpInside" id="fYH-jK-BRu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdT-3s-qRL">
+                                <rect key="frame" x="153" y="653.5" width="108" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FdT-3s-qRL" secondAttribute="height" multiplier="6:4" id="Ra7-OX-P58"/>
+                                </constraints>
+                                <state key="normal" image="med"/>
+                                <connections>
+                                    <action selector="clickEasyMode:" destination="7hT-dM-YLf" eventType="touchUpInside" id="lp6-Am-xZ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afD-VM-5Ss">
+                                <rect key="frame" x="153" y="740.5" width="108" height="71.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="afD-VM-5Ss" secondAttribute="height" multiplier="6:4" id="YRP-9R-C7s"/>
+                                </constraints>
+                                <state key="normal" image="diff"/>
+                                <connections>
+                                    <action selector="clickEasyMode:" destination="7hT-dM-YLf" eventType="touchUpInside" id="17d-ZI-8gv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="afD-VM-5Ss" firstAttribute="centerX" secondItem="3Nv-CM-fat" secondAttribute="centerX" id="0FY-qa-M2O"/>
+                            <constraint firstItem="f5S-es-6hR" firstAttribute="width" secondItem="sd5-hL-IUV" secondAttribute="width" multiplier="0.8" id="Amx-YA-WDY"/>
+                            <constraint firstItem="afD-VM-5Ss" firstAttribute="height" secondItem="f5S-es-6hR" secondAttribute="height" multiplier="0.2" id="Byt-Zg-6wK"/>
+                            <constraint firstItem="f5S-es-6hR" firstAttribute="top" secondItem="sd5-hL-IUV" secondAttribute="top" constant="50" id="GZM-sl-W0F"/>
+                            <constraint firstItem="gCI-dv-3uf" firstAttribute="height" secondItem="f5S-es-6hR" secondAttribute="height" multiplier="0.2" id="H8O-95-QTe"/>
+                            <constraint firstItem="f5S-es-6hR" firstAttribute="height" secondItem="3Nv-CM-fat" secondAttribute="height" multiplier="0.4" id="J9l-4q-Ysl"/>
+                            <constraint firstItem="FdT-3s-qRL" firstAttribute="height" secondItem="f5S-es-6hR" secondAttribute="height" multiplier="0.2" id="Lh8-Di-iuB"/>
+                            <constraint firstItem="gCI-dv-3uf" firstAttribute="centerX" secondItem="3Nv-CM-fat" secondAttribute="centerX" id="Uy3-km-j2x"/>
+                            <constraint firstItem="f5S-es-6hR" firstAttribute="centerX" secondItem="3Nv-CM-fat" secondAttribute="centerX" id="Yhf-wV-Orr"/>
+                            <constraint firstItem="afD-VM-5Ss" firstAttribute="top" secondItem="FdT-3s-qRL" secondAttribute="bottom" constant="15" id="bf1-8o-OU3"/>
+                            <constraint firstItem="sd5-hL-IUV" firstAttribute="bottom" secondItem="afD-VM-5Ss" secondAttribute="bottom" constant="50" id="ebR-4b-zzm"/>
+                            <constraint firstItem="FdT-3s-qRL" firstAttribute="centerX" secondItem="3Nv-CM-fat" secondAttribute="centerX" id="kD7-DO-iaH"/>
+                            <constraint firstItem="FdT-3s-qRL" firstAttribute="top" secondItem="gCI-dv-3uf" secondAttribute="bottom" constant="15" id="z1F-Jb-gGH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sd5-hL-IUV"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toGameVC" id="ILO-rp-mud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jmL-01-Ebu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871.01449275362324" y="65.625"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="LearnWord123" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GTT-dK-aOJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="69"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="diff" width="635" height="430"/>
+        <image name="easy" width="635" height="430"/>
+        <image name="iconLarge" width="500" height="500"/>
+        <image name="med" width="635" height="431"/>
+    </resources>
 </document>
