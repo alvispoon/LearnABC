@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2F7324B1-3402-4F0F-BD87-BFD1FBA73243"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0600BF7-CEAE-42DD-AFB9-E04EED3A4921"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LearnWord123/mainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "mainViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B0600BF7-CEAE-42DD-AFB9-E04EED3A4921 - 739ceaa2955e30b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LearnWord123.mainViewController.defaults.getter : __C.NSUserDefaults"
+                  moduleName = "LearnWord123"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvispoon/iOS%20App/yydaddy/LearnWord123/LearnWord123/mainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "B0600BF7-CEAE-42DD-AFB9-E04EED3A4921 - ad502201579bafee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LearnWord123.mainViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; LearnWord123.mainViewController"
+                  moduleName = "LearnWord123"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvispoon/iOS%20App/yydaddy/LearnWord123/LearnWord123/mainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  uuid = "B0600BF7-CEAE-42DD-AFB9-E04EED3A4921 - 2e0d551035e1bae5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LearnWord123.mainViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;LearnWord123.mainViewController&gt;"
+                  moduleName = "LearnWord123"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvispoon/iOS%20App/yydaddy/LearnWord123/LearnWord123/mainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "98">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
