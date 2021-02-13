@@ -13,9 +13,12 @@ class mainViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer!
 
+    @IBOutlet weak var menu1: UIStackView!
+    @IBOutlet weak var menu2: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        menu2.isHidden = true
     }
     let defaults = UserDefaults.standard
     
@@ -24,6 +27,18 @@ class mainViewController: UIViewController {
 //        print ("PerformSegus")
 //        self.performSegue(withIdentifier: "toGameVC", sender: sender)
 //    }
+    @IBAction func selectLearnTest(_ sender: Any) {
+        let clickedButton = sender as! UIButton
+        playSound1(filename: "selected.wav")
+        if (clickedButton.tag == 0){
+            print ("clickedButton.tag \(clickedButton.tag)")
+            defaults.set(-1, forKey: "Mode")
+            self.performSegue(withIdentifier: "toGameVC", sender: nil)
+        }else{
+            menu1.isHidden = true
+            menu2.isHidden = false
+        }
+    }
     
     @IBAction func clickEasyMode(_ sender: Any) {
         let clickedButton = sender as! UIButton
@@ -31,6 +46,8 @@ class mainViewController: UIViewController {
         
         defaults.set(clickedButton.tag, forKey: "Mode")
         print (clickedButton.tag)
+        menu1.isHidden = false
+        menu2.isHidden = true
                 self.performSegue(withIdentifier: "toGameVC", sender: sender)
     }
     

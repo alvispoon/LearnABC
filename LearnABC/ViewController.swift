@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,GADInterstitialDelegate {
 
     private let controller:GameController
+    
+    var interstitial: GADInterstitial!
+    
+    var prevNextBtnID = 0
     
     var level = Level()
     
@@ -20,8 +25,15 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        //print ("viewDidLoad")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let mode = UserDefaults.standard.integer(forKey: "Mode")
+        
+        interstitial = createAndLoadInterstitial()
+        interstitial.delegate = self
+        let request = GADRequest()
+        interstitial.load(request)
         
         
         
@@ -35,7 +47,7 @@ class ViewController: UIViewController {
         
         controller.gameView.backgroundColor = .white
         
-        let hudView = HUDView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
+        let hudView = HUDView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight), mode: mode)
         self.view.addSubview(hudView)
         controller.hud = hudView
 
@@ -68,8 +80,28 @@ class ViewController: UIViewController {
 //        modeView.popupModeButtonHandlerDelegate = self
 //         self.view.addSubview(modeView)
 //
+        print ("check interstitial.isReady")
         
         
+        
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+     // var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")  //testing ads
+        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-6628389226232597/5027669662")
+      interstitial.delegate = self
+      interstitial.load(GADRequest())
+      return interstitial
+    }
+
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+      interstitial = createAndLoadInterstitial()
+        //self.controller.gotoNext()
+        if (prevNextBtnID > -1){
+            self.controller.gotoNext()
+        }else{
+            self.controller.nexPrevButton(prevNext: prevNextBtnID)
+        }
     }
 
 
@@ -78,7 +110,19 @@ class ViewController: UIViewController {
 
 extension ViewController:  GameControllerDelegate{
     func callHome() {
-        self.dismiss(animated: true, completion: nil)
+        
+       self.dismiss(animated: true, completion: nil)
+    }
+    
+    func callAds(mode: Int){
+        prevNextBtnID = mode
+        if (!AdmobManager.requestAdsIfAppropriate(vc: self, interstitial: interstitial )){
+            if (mode > -1){
+                self.controller.gotoNext()
+            }else{
+                self.controller.nexPrevButton(prevNext: mode)
+            }
+        }
     }
 }
 

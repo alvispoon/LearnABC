@@ -1,7 +1,7 @@
 //
 //  GameController.swift
 //  LearnWord123
-//
+//f
 //  Created by Alvis Poon on 26/5/2020.
 //  Copyright © 2020 Alvis Poon. All rights reserved.
 //
@@ -11,6 +11,7 @@ import AVFoundation
 protocol GameControllerDelegate {
 
     func callHome()
+    func callAds(mode: Int)
 }
 
 
@@ -38,6 +39,7 @@ class GameController{
      }
 
     var mode = UserDefaults.standard.integer(forKey: "Mode")
+    var currentLetter = 0
     
     private var targets = [ResultView]()
     private var tiles = [TileView]()
@@ -56,6 +58,7 @@ class GameController{
     var word : String = ""
     var passed : Int = 0
     
+    var learnCount : Int = 0
     
     var popupView:PopupLevel! {
       didSet {
@@ -85,6 +88,12 @@ class GameController{
     }
     
     func generateAutoCompleteWord(){
+        if (mode == -1){
+            for index in 0...self.word.count-1 {
+                
+                self.autoCompleteWord.append(true)
+            }
+        }else{
         self.autoCompleteWord.removeAll()
         
         let numberOfTestCharacter = numTestedChar[mode][word.count-1]
@@ -104,8 +113,8 @@ class GameController{
             
             self.autoCompleteWord[numberChar[index]] = false
         }
-        print (self.autoCompleteWord)
-        
+        print ("self.autoCompleteWord \(self.autoCompleteWord)")
+        }
     }
     
 
@@ -114,13 +123,19 @@ class GameController{
         
         print ("Enter Generate Letter")
         print (mode)
-        
         var randomIndex = 0
+        
+        if (mode != -1){
         repeat {
             randomIndex = randomNumber(minX:0, maxX:UInt32(words.count-1))
         } while (completedWord[randomIndex])
 
         completedWord[randomIndex] = true
+        }else{
+            randomIndex = learnCount
+        }
+        
+            
         let wordPair = words[randomIndex] as! NSArray
         word = wordPair[0] as! String
         let wordPic = wordPair[1] as! String
@@ -158,9 +173,6 @@ class GameController{
           if letter != " " {
             let target = ResultView(letter: letter, sideLength: tileSide*0.9)
             
-            print (index)
-            print (xOffset + CGFloat(index)*(tileSide + TileMargin))
-            
             target.center = CGPoint(x:xOffset + CGFloat(index)*(tileSide + TileMargin), y:ScreenHeight/3*2)
             gameView.addSubview(target)
             targets.append(target)
@@ -170,6 +182,7 @@ class GameController{
         tiles = []
         for (index, letter) in word.shuffled().enumerated() {
           if letter != " " {
+            print ("letter \(letter)")
             let tile = TileView(letter: letter, sideLength: tileSide*0.9)
             tile.center = CGPoint(x: xOffset + CGFloat(index)*(tileSide + TileMargin), y: ScreenHeight/6*5)
             //tile.randomize()
@@ -179,10 +192,118 @@ class GameController{
           }
         }
         
-        speak()
+        
+        
         assignAnswer()
+        speak()
+        
+        if (mode == -1){
+            addNextPrevButton()
+            addSoundButton()
+            spellAndSpeak()
+        }
         
     }
+    
+    func addNextPrevButton(){
+        
+        let tileSide = (ceil((ScreenWidth * 0.9 - TileMargin * CGFloat(3)) / CGFloat(3)) - TileMargin > maxTileWidth) ? maxTileWidth : ceil((ScreenWidth * 0.9 - TileMargin * CGFloat(3)) / CGFloat(3)) - TileMargin
+        
+        var xOffset = (ScreenWidth - (CGFloat(3) * (tileSide + TileMargin))) / 2.0
+        //xOffset += tileSide / 2.0
+       
+        
+        let prevButton = ActionButton(defaultButtonImage: "prevBTN", defaultTitle: "", action: nextprevButtonHandler, level: -2, width: tileSide*0.9, height: tileSide*0.9)
+        let nextButton = ActionButton(defaultButtonImage: "nextBTN", defaultTitle: "", action: nextprevButtonHandler, level: -3, width: tileSide*0.9, height: tileSide*0.9)
+        
+        prevButton.frame = CGRect(x: xOffset + CGFloat(0)*(tileSide + TileMargin), y: ScreenHeight/6*4.5, width: tileSide*0.9, height: tileSide*0.9)
+        
+        nextButton.frame = CGRect(x: xOffset + CGFloat(2)*(tileSide + TileMargin), y: ScreenHeight/6*4.5, width: tileSide*0.9, height: tileSide*0.9)
+        
+        //prevButton.frame = CGRect(x: buttonGroupMargin + (buttonwidth + buttonmargin)*CGFloat(j) , y: buttonGroupTop+(buttonwidth+buttonmargin)*CGFloat(i), width: buttonwidth, height: buttonwidth)
+        
+        
+        
+        gameView.addSubview(prevButton)
+        gameView.addSubview(nextButton)
+    }
+    
+    
+    func addSoundButton(){
+        
+        let tileSide = (ceil((ScreenWidth * 0.9 - TileMargin * CGFloat(3)) / CGFloat(3)) - TileMargin > maxTileWidth) ? maxTileWidth : ceil((ScreenWidth * 0.9 - TileMargin * CGFloat(3)) / CGFloat(3)) - TileMargin
+        
+        var xOffset = (ScreenWidth - (CGFloat(3) * (tileSide + TileMargin))) / 2.0
+        //xOffset += tileSide / 2.0
+       
+        
+        let soundImage = UIImage(named: "speakBTN.png")!
+        var soundImageView = UIImageView(image: soundImage)
+        //let scale = imageSizeW / wordButtonImage.size.width
+        soundImageView.frame =  CGRect(x: xOffset + CGFloat(1)*(tileSide + TileMargin), y: ScreenHeight/6*4.5, width: tileSide*0.9, height: tileSide*0.9)
+        let tapGetsure = UITapGestureRecognizer(target: self,
+                                                action: #selector(self.spellAndSpeak))
+        tapGetsure.numberOfTapsRequired = 1
+        soundImageView.gestureRecognizers = [tapGetsure]
+        soundImageView.isUserInteractionEnabled = true
+        
+        gameView.addSubview(soundImageView)
+    }
+    
+    @objc func nextprevButtonHandler(index: Int) {
+       //switch index {
+        //case PopupButtons.level:
+        //playSound1(filename: "selected.wav")
+        print ("index \(index)")
+        
+        delegate?.callAds(mode: index)
+        
+        //popupButtonHandlerDelegate?.levelTapped(level: index)
+
+    }
+    
+    func nexPrevButton(prevNext: Int){
+        if (prevNext == -2){
+            learnCount = learnCount - 1
+        }else{
+            learnCount = learnCount + 1
+        }
+            if (learnCount>=self.words.count){
+                learnCount = 0
+            }
+        if (learnCount)<0{
+            learnCount = self.words.count-1
+        }
+        self.clearBoard()
+        self.generateLetter()
+    }
+    
+    
+    @objc func spellAndSpeak(){
+        speak_perword()
+        speak()
+    }
+    
+    @objc func speak_perword(){
+        print ("Click image view")
+               
+        var utteranceArray:[AVSpeechUtterance]  = []
+        
+        for char in word {
+            let utterance = AVSpeechUtterance(string: String(char))
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-UK")
+            utterance.voice = AVSpeechSynthesisVoice(identifier: "Karen")
+            utterance.rate = 0.3
+            utteranceArray.append(utterance)
+        }
+        for utterance in utteranceArray{
+            
+            synthesizer.speak(utterance)
+        }
+                
+    }
+
+    
     
     @objc func speak(){
         print ("Click image view")
@@ -216,6 +337,7 @@ class GameController{
                     if (tileView.isUserInteractionEnabled){
                     if targetView.letter == tileView.letter {
                         
+                        if (mode != -1){
                         let newTile = tileView.clone(letter: generateDummyAnswer())
                         
  //                       print (generateDummyAnswer())
@@ -223,8 +345,9 @@ class GameController{
                         tiles.append(newTile)
                         gameView.addSubview(newTile)
                         
-                        self.placeTile(tileView: tileView, targetView: targetView)
                         
+                        }
+                        self.placeTile(tileView: tileView, targetView: targetView)
                         break
                     }
                     }
@@ -286,8 +409,9 @@ class GameController{
         playSound1(filename: "success.wav")
         passed += 1
         print (completedWord)
-        AppStoreReviewManager.requestReviewIfAppropriate()
+       // AppStoreReviewManager.requestReviewIfAppropriate()
         
+        //AdmobManager.showAdsIfAppropriate()
 //
 //        let trophyImage = UIImage(named: "trophy.png")!
 //        let trophyImageView = UIImageView(image: trophyImage)
@@ -320,7 +444,7 @@ class GameController{
                         for tile in self.tiles{
                             tile.frame.origin.x = ScreenWidth * 2
                         }
-        }, completion: {_ in self.gotoNext()})
+                     }, completion: {_ in self.delegate?.callAds(mode: self.mode)})
         
 
     }
@@ -335,7 +459,7 @@ class GameController{
                     //AppStoreReviewManager.requestReviewIfAppropriate()
                     playSound1(filename: "levelup.wav")
                     print ("level completed")
-                    popupVictory = PopupVictory(frame: CGRect(x: 0, y: 0, width: ScreenWidth*0.8, height: ScreenHeight*0.8), words: words, score: points)
+                    popupVictory = PopupVictory(frame: CGRect(x: 0, y: 0, width: ScreenWidth*0.8, height: ScreenHeight*0.8), words: words, score: points )
                     popupVictory.popupVictoryButtonHandlerDelegate = self
                     gameView.addSubview(popupVictory)
         
@@ -430,3 +554,5 @@ extension GameController: PopupVictoryButtonHandlerDelegate {
     }
 
 }
+
+

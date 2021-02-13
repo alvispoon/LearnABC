@@ -19,7 +19,7 @@ class HUDView: UIView {
     fatalError("use init(frame:")
   }
 
-  override init(frame:CGRect) {
+    init(frame:CGRect, mode: Int) {
     //the dynamic points label
     
 
@@ -61,9 +61,12 @@ class HUDView: UIView {
     
     
     super.init(frame:frame)
-
-    self.addSubview(trophyImageView)
-     self.addSubview(gamePoints)
+        if (mode != -1){
+            self.addSubview(trophyImageView)
+        
+            self.addSubview(gamePoints)
+            
+        }
     self.addSubview(homeButton)
     //self.isUserInteractionEnabled = false
 
@@ -83,3 +86,4 @@ class HUDView: UIView {
     }
 
 }
+

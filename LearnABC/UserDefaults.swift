@@ -12,6 +12,7 @@ extension UserDefaults {
   enum Key: String {
     case reviewWorthyActionCount
     case lastReviewRequestAppVersion
+    case adMobActionCount
   }
 
   func integer(forKey key: Key) -> Int {

@@ -55,7 +55,7 @@ class PopupVictory: UIView {
         levelTitleLabel.font = UIFont(name:"Arial-BoldMT" , size: 100.0)!
         levelTitleLabel.textColor = .black
         levelTitleLabel.textAlignment = .center
-        levelTitleLabel.text = "You Win"
+        levelTitleLabel.text = "WIN"
         levelTitleLabel.minimumScaleFactor = 0.1    //or whatever suits your need
         levelTitleLabel.adjustsFontSizeToFitWidth = true
         levelTitleLabel.lineBreakMode = .byClipping
@@ -178,3 +178,4 @@ class PopupVictory: UIView {
     
     
 }
+
