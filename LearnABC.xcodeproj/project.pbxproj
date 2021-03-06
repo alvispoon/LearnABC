@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A824B814C89EE713AC3B3CF /* Pods_LearnABC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CD4F1EA01EC579C13E2311 /* Pods_LearnABC.framework */; };
+		02B80EEC926C2A2AA051DD32 /* Pods_LearnABC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995D33A874D9EC02CC4F365A /* Pods_LearnABC.framework */; };
 		F06A7A20247D034300FFC07E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A1F247D034300FFC07E /* AppDelegate.swift */; };
 		F06A7A22247D034300FFC07E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A21247D034300FFC07E /* SceneDelegate.swift */; };
 		F06A7A24247D034300FFC07E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A23247D034300FFC07E /* ViewController.swift */; };
 		F06A7A27247D034300FFC07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A25247D034300FFC07E /* Main.storyboard */; };
 		F06A7A29247D034600FFC07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A28247D034600FFC07E /* Assets.xcassets */; };
 		F06A7A2C247D034600FFC07E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A2A247D034600FFC07E /* LaunchScreen.storyboard */; };
-		F06A7A35247D039D00FFC07E /* AtoZ.plist in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A34247D039D00FFC07E /* AtoZ.plist */; };
+		F06A7A35247D039D00FFC07E /* ABC.plist in Resources */ = {isa = PBXBuildFile; fileRef = F06A7A34247D039D00FFC07E /* ABC.plist */; };
 		F06A7A38247D046800FFC07E /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A37247D046800FFC07E /* Level.swift */; };
 		F06A7A3B247D056100FFC07E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A3A247D056100FFC07E /* GameController.swift */; };
 		F06A7A3D247D064700FFC07E /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A7A3C247D064700FFC07E /* config.swift */; };
@@ -32,13 +32,16 @@
 		F09FF6A0249CB0CC00E609FF /* levelup.wav in Resources */ = {isa = PBXBuildFile; fileRef = F09FF69F249CB0CC00E609FF /* levelup.wav */; };
 		F09FF6A624A4CA7A00E609FF /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FF6A524A4CA7A00E609FF /* AppStoreReviewManager.swift */; };
 		F09FF6A824A4CB6600E609FF /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FF6A724A4CB6600E609FF /* UserDefaults.swift */; };
+		F0C73D1D25EBE2C400941A12 /* ABCD.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0C73D1A25EBE2C300941A12 /* ABCD.plist */; };
+		F0C73D1E25EBE2C400941A12 /* ABCDE.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0C73D1B25EBE2C400941A12 /* ABCDE.plist */; };
+		F0C73D1F25EBE2C400941A12 /* ABCDEF.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0C73D1C25EBE2C400941A12 /* ABCDEF.plist */; };
 		F0D453C52554470D0086D01F /* AdmobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D453C42554470D0086D01F /* AdmobManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D0971E44B4B057A6F31FA0D /* Pods-LearnABC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnABC.release.xcconfig"; path = "Target Support Files/Pods-LearnABC/Pods-LearnABC.release.xcconfig"; sourceTree = "<group>"; };
-		94AC6B3A6F6D6411728C16F9 /* Pods-LearnABC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnABC.debug.xcconfig"; path = "Target Support Files/Pods-LearnABC/Pods-LearnABC.debug.xcconfig"; sourceTree = "<group>"; };
-		B9CD4F1EA01EC579C13E2311 /* Pods_LearnABC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnABC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		187B970D2855E63E1ABD7D60 /* Pods-LearnABC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnABC.release.xcconfig"; path = "Target Support Files/Pods-LearnABC/Pods-LearnABC.release.xcconfig"; sourceTree = "<group>"; };
+		995D33A874D9EC02CC4F365A /* Pods_LearnABC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnABC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A373D369BCCA9C1675E641 /* Pods-LearnABC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnABC.debug.xcconfig"; path = "Target Support Files/Pods-LearnABC/Pods-LearnABC.debug.xcconfig"; sourceTree = "<group>"; };
 		F06A7A1C247D034300FFC07E /* Words Game - 3 Letters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Words Game - 3 Letters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06A7A1F247D034300FFC07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F06A7A21247D034300FFC07E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +50,7 @@
 		F06A7A28247D034600FFC07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F06A7A2B247D034600FFC07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F06A7A2D247D034600FFC07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F06A7A34247D039D00FFC07E /* AtoZ.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AtoZ.plist; sourceTree = "<group>"; };
+		F06A7A34247D039D00FFC07E /* ABC.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ABC.plist; sourceTree = "<group>"; };
 		F06A7A37247D046800FFC07E /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		F06A7A3A247D056100FFC07E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		F06A7A3C247D064700FFC07E /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
@@ -65,6 +68,9 @@
 		F09FF69F249CB0CC00E609FF /* levelup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelup.wav; sourceTree = "<group>"; };
 		F09FF6A524A4CA7A00E609FF /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		F09FF6A724A4CB6600E609FF /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		F0C73D1A25EBE2C300941A12 /* ABCD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ABCD.plist; sourceTree = "<group>"; };
+		F0C73D1B25EBE2C400941A12 /* ABCDE.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ABCDE.plist; sourceTree = "<group>"; };
+		F0C73D1C25EBE2C400941A12 /* ABCDEF.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ABCDEF.plist; sourceTree = "<group>"; };
 		F0D453C42554470D0086D01F /* AdmobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,28 +79,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A824B814C89EE713AC3B3CF /* Pods_LearnABC.framework in Frameworks */,
+				02B80EEC926C2A2AA051DD32 /* Pods_LearnABC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5084D5EA48B28375B7C9B366 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B9CD4F1EA01EC579C13E2311 /* Pods_LearnABC.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		56239A9C87D8BCEDBAF72369 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				94AC6B3A6F6D6411728C16F9 /* Pods-LearnABC.debug.xcconfig */,
-				5D0971E44B4B057A6F31FA0D /* Pods-LearnABC.release.xcconfig */,
+				C0A373D369BCCA9C1675E641 /* Pods-LearnABC.debug.xcconfig */,
+				187B970D2855E63E1ABD7D60 /* Pods-LearnABC.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A179B4A23947DB476946CC1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				995D33A874D9EC02CC4F365A /* Pods_LearnABC.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F06A7A13247D034300FFC07E = {
@@ -103,7 +109,7 @@
 				F06A7A1E247D034300FFC07E /* LearnABC */,
 				F06A7A1D247D034300FFC07E /* Products */,
 				56239A9C87D8BCEDBAF72369 /* Pods */,
-				5084D5EA48B28375B7C9B366 /* Frameworks */,
+				A179B4A23947DB476946CC1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,7 +152,10 @@
 		F06A7A33247D035B00FFC07E /* Levels */ = {
 			isa = PBXGroup;
 			children = (
-				F06A7A34247D039D00FFC07E /* AtoZ.plist */,
+				F06A7A34247D039D00FFC07E /* ABC.plist */,
+				F0C73D1A25EBE2C300941A12 /* ABCD.plist */,
+				F0C73D1B25EBE2C400941A12 /* ABCDE.plist */,
+				F0C73D1C25EBE2C400941A12 /* ABCDEF.plist */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -195,12 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F06A7A30247D034600FFC07E /* Build configuration list for PBXNativeTarget "LearnABC" */;
 			buildPhases = (
-				F27C19DB63D2F848B2B36C52 /* [CP] Check Pods Manifest.lock */,
-				CFD221DDC89DCEA2DF9DCCC3 /* [CP] Prepare Artifacts */,
+				DFBC8EDBADF6A0C7A792E58B /* [CP] Check Pods Manifest.lock */,
 				F06A7A18247D034300FFC07E /* Sources */,
 				F06A7A19247D034300FFC07E /* Frameworks */,
 				F06A7A1A247D034300FFC07E /* Resources */,
-				32A6C922E61B7EC90D0C02CA /* [CP] Embed Pods Frameworks */,
+				E4EB634F74DE5BEDE96D392C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,12 +257,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C73D1F25EBE2C400941A12 /* ABCDEF.plist in Resources */,
 				F09FF69C249CAB3700E609FF /* success.wav in Resources */,
 				F09FF69D249CAB3700E609FF /* selected.wav in Resources */,
 				F06A7A2C247D034600FFC07E /* LaunchScreen.storyboard in Resources */,
 				F06A7A29247D034600FFC07E /* Assets.xcassets in Resources */,
 				F09FF6A0249CB0CC00E609FF /* levelup.wav in Resources */,
-				F06A7A35247D039D00FFC07E /* AtoZ.plist in Resources */,
+				F0C73D1D25EBE2C400941A12 /* ABCD.plist in Resources */,
+				F0C73D1E25EBE2C400941A12 /* ABCDE.plist in Resources */,
+				F06A7A35247D039D00FFC07E /* ABC.plist in Resources */,
 				F09FF69E249CAB3700E609FF /* fail1.wav in Resources */,
 				F06A7A27247D034300FFC07E /* Main.storyboard in Resources */,
 			);
@@ -263,41 +274,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32A6C922E61B7EC90D0C02CA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CFD221DDC89DCEA2DF9DCCC3 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F27C19DB63D2F848B2B36C52 /* [CP] Check Pods Manifest.lock */ = {
+		DFBC8EDBADF6A0C7A792E58B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,6 +294,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4EB634F74DE5BEDE96D392C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnABC/Pods-LearnABC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -484,11 +478,11 @@
 		};
 		F06A7A31247D034600FFC07E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94AC6B3A6F6D6411728C16F9 /* Pods-LearnABC.debug.xcconfig */;
+			baseConfigurationReference = C0A373D369BCCA9C1675E641 /* Pods-LearnABC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 7U4WLYVZTV;
 				INFOPLIST_FILE = LearnABC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -496,7 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yydaddy.LearnABC3;
 				PRODUCT_NAME = "Words Game - 3 Letters";
 				SWIFT_VERSION = 5.0;
@@ -506,11 +500,11 @@
 		};
 		F06A7A32247D034600FFC07E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D0971E44B4B057A6F31FA0D /* Pods-LearnABC.release.xcconfig */;
+			baseConfigurationReference = 187B970D2855E63E1ABD7D60 /* Pods-LearnABC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 7U4WLYVZTV;
 				INFOPLIST_FILE = LearnABC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -518,7 +512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yydaddy.LearnABC3;
 				PRODUCT_NAME = "Words Game - 3 Letters";
 				SWIFT_VERSION = 5.0;

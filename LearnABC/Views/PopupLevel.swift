@@ -13,7 +13,7 @@ class PopupLevel: UIView {
     
     var audioPlayer: AVAudioPlayer!
   
-    var level = Level()
+    var level = Level(inputfile: "ABC.plist")
     let maxCol = 5
     let maxRow = 7
     

@@ -17,7 +17,7 @@ class ViewController: UIViewController,GADInterstitialDelegate {
     
     var prevNextBtnID = 0
     
-    var level = Level()
+    var level = Level(inputfile: "ABC.plist")
     
     required init?(coder aDecoder: NSCoder) {
       controller = GameController()
@@ -29,6 +29,8 @@ class ViewController: UIViewController,GADInterstitialDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let mode = UserDefaults.standard.integer(forKey: "Mode")
+        let file = UserDefaults.standard.string(forKey: "level")
+        
         
         interstitial = createAndLoadInterstitial()
         interstitial.delegate = self
@@ -40,7 +42,7 @@ class ViewController: UIViewController,GADInterstitialDelegate {
         let gameView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
         self.view.addSubview(gameView)
         controller.gameView = gameView
-        controller.level = Level()
+        controller.level = Level(inputfile: file!)
         //controller.generateLetter()
         //controller.gameView.alpha = 0.5
         controller.delegate = self

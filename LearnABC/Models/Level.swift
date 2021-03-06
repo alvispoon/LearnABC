@@ -13,12 +13,12 @@ struct Level {
     let wordsTitle: [String]
     let words: [NSArray]
 
-
+    var fileName = "ABC.plist"
     
 
-init() {
+    init(inputfile: String) {
   //1 find .plist file for this level
-  let fileName = "AtoZ.plist"
+  fileName = inputfile
   let levelPath = "\(Bundle.main.resourcePath!)/\(fileName)"
     
   //2 load .plist file
